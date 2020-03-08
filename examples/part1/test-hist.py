@@ -28,7 +28,7 @@ hsv_g = cv2.cvtColor(rgb_g, cv2.COLOR_BGR2HSV)
 
 
 
-# определить диапазон зеленого цвета в HSV
+# определить диапазон цветов в HSV (все оттенки, но контраст и насышенность не менее 100)
 lower = np.array([0, 100, 100])
 upper = np.array([255, 255, 255])
 mask = cv2.inRange(hsv_g, lower, upper)
